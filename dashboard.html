@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Citas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard - Citas</h1>
+        <button onclick="window.location.href='index.html'">Cerrar sesión</button>
+        <button onclick="window.location.href='index.html'">Ir al Inicio</button> <!-- Nuevo botón -->
+    </header>
+
+    <section id="appointments">
+        <h2>Agendar una Cita</h2>
+        <form id="citaForm">
+            <label for="service">Servicio:</label>
+            <select id="service">
+                <option value="Hospedaje">Hospedaje de Mascotas</option>
+                <option value="Visita a Hogar">Visita a Hogar</option>
+                <option value="Paseo">Paseo de Mascota</option>
+            </select>
+
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Hora:</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Agregar Cita</button>
+        </form>
+
+        <div id="error-message" style="color: red; display: none;"></div>
+
+        <h2>Citas Agendadas</h2>
+        <ul id="appointmentsList"></ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cuidado de Mascotas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
