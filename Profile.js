@@ -5,23 +5,36 @@ const MascotasLink = document.getElementById('Mascotas');
 const AgendaLink = document.getElementById('Agenda');
 
 // Seleccionar todas las secciones principales
-const secciones = document.querySelectorAll('.profile-content, .PerfilInfo');
+const secciones = document.querySelectorAll('.profile-content, .profile-details, #detalles-mascotas');
 
-const PerfilInfo = document.querySelectorAll('.PerfilInfo');
+const PerfilInfo = document.querySelectorAll('.profile-content, .profile-details');
 const MascotasInfo = document.getElementById('detalles-mascotas');
 
-MascotasInfo.style.display = 'none';
+secciones.forEach(section => section.style.display = 'none');
+PerfilInfo.forEach(section => section.style.display = 'block');
 
 // Evento click en Mascotas
 MascotasLink.addEventListener('click', (event) => {
     event.preventDefault(); // Evitar que el enlace recargue la página
 
     // Ocultar todas las secciones del perfil
-    PerfilInfo.forEach(section => section.style.display = 'none');
+    secciones.forEach(section => section.style.display = 'none');
 
     // Mostrar la sección de mascotas y ocultar la que este
     MascotasInfo.style.display = 'block';
 });
+
+// Evento click en Perfil
+PerfilLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Evitar que el enlace recargue la página
+
+    // Ocultar todas las secciones del perfil
+    secciones.forEach(section => section.style.display = 'none');
+
+    // Mostrar la sección de mascotas y ocultar la que este
+    PerfilInfo.forEach(section => section.style.display = 'block');
+});
+
 
 
 
