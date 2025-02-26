@@ -1,0 +1,147 @@
+/* Configuración global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Para que los elementos se acomoden verticalmente */
+    height: 100vh;
+}
+
+/* Barra de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Ajusta el tamaño de la barra */
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    height: calc(100% - 60px); /* Resta la altura de la navbar */
+    margin-top: 60px; /* Asegura que no se sobreponga con la navbar */
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px); /* Altura total menos la altura de la navbar */
+    position: fixed; /* Fija la barra lateral */
+    left: 0; /* Pegada a la izquierda */
+    top: 60px; /* Debajo de la navbar */
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es largo */
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #34495e;
+    border-radius: 5px;
+}
+
+/* Sección de perfil */
+.profile-content {
+    margin-left: 250px; /* Deja espacio para la barra lateral */
+    padding: 30px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Encabezado del perfil */
+.profile-header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #2c3e50;
+}
+
+/* Detalles del perfil */
+.profile-details {
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.profile-details h2 {
+    text-align: center;
+}
+
+.profile-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 8px 0;
+}
+
+/* Botón */
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #1f6690;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px; /* Espacio a la derecha del ícono */
+}
+
+#detalles-mascotas {
+    margin-left: 250px; /* Deja espacio para la barra lateral */
+    padding: 30px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

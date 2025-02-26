@@ -1,0 +1,10 @@
+/* custom-styles.css */
+:root {
+    --bs-body-bg: #f0f0f0; /* Cambia el color de fondo del cuerpo a un gris claro */
+    --bs-card-bg: #ffffff; /* Cambia el color de fondo de las tarjetas a blanco */
+}
+
+[data-bs-theme=dark] {
+    --bs-body-bg: #333333; /* Cambia el color de fondo del cuerpo a un gris oscuro */
+    --bs-card-bg: #444444; /* Cambia el color de fondo de las tarjetas a un gris más oscuro */
+}

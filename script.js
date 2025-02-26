@@ -43,4 +43,3 @@ document.getElementById('sign-in-form').addEventListener('submit', function (e) 
   });
 });
 
-//lol

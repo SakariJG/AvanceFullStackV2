@@ -81,13 +81,12 @@ body {
     margin-top: 7rem;
   }
 }
-
 /* Style for the container of the buttons */
 .auth-buttons {
   display: flex; /* Align buttons in a row */
   justify-content: center; /* Center the buttons horizontally */
-  gap: 15px; /* Space between buttons */
-  margin-top: 2rem; /* Space above the buttons */
+  gap: 10px; /* Space between buttons */
+  margin-top: 1rem; /* Space above the buttons */
 }
 
 /* General button styling */
@@ -95,12 +94,12 @@ body {
   background-color: #007bff; /* Blue background */
   color: white; /* White text */
   border: none; /* Remove border */
-  padding: 12px 20px; /* Padding inside the button */
+  padding: 8px 16px; /* Reduced padding inside the button */
   border-radius: 5px; /* Rounded corners */
-  font-size: 1rem; /* Font size */
+  font-size: 0.9rem; /* Reduced font size */
   transition: background-color 0.3s, transform 0.2s ease-in-out; /* Smooth transition for background and transform */
   cursor: pointer; /* Change cursor to pointer on hover */
-  width: 180px; /* Set a fixed width */
+  width: 160px; /* Reduced fixed width */
 }
 
 /* Style for hover effect */
@@ -115,20 +114,41 @@ body {
   transform: translateY(1px); /* Button presses down when clicked */
 }
 
-/* Specific style for 'Registrarse' button */
+/* Estilo para centrar los botones */
+.auth-buttons {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  gap: 8px; /* Reduced spacing between buttons */
+}
+
+/* General button styles */
+.auth-buttons button {
+  padding: 4% 8%; /* Reduced size using percentages */
+  font-size: 90%; /* Adjusted font size using percentages */
+  border-radius: 6px; /* Rounded corners */
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 5%; /* Reduced space below buttons using percentage */
+}
+
+/* 'Registrarse' button - Azul Marino */
 .auth-buttons button:first-child {
-  background-color: #28a745; /* Green for 'Registrarse' */
+  background-color: #1e3a8a; /* Azul Marino */
+  color: white;
 }
 
 .auth-buttons button:first-child:hover {
-  background-color: #218838; /* Darker green for hover */
+  background-color: #172554; /* Azul más oscuro */
 }
 
-/* Specific style for 'Iniciar Sesión' button */
+/* 'Iniciar Sesión' button - Gris Oscuro */
 .auth-buttons button:last-child {
-  background-color: #ffc107; /* Yellow for 'Iniciar Sesión' */
+  background-color: #374151; /* Gris Oscuro */
+  color: white;
 }
 
 .auth-buttons button:last-child:hover {
-  background-color: #e0a800; /* Darker yellow for hover */
+  background-color: #1f2937; /* Gris más oscuro */
 }
