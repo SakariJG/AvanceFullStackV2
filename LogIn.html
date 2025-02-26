@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LogIn.css"> <!-- Asegúrate de que la ruta sea correcta -->
+    <title>Login & Sign Up</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+<script>
+  fetch("header.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("header-placeholder").innerHTML = data;
+    })
+    .catch(error => console.error("Error al cargar el header:", error));
+</script>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="login-form" class="form">
+                <h2>Iniciar Sesión</h2>
+                <input type="email" id="emailLogIn" placeholder="Correo Electrónico" required>
+                <input type="password" id="passwordLogIn" placeholder="Contraseña" required>
+                <button type="button" id="InicioSesion">Iniciar Sesión</button>
+                <p>¿No tienes una cuenta? <a href="#" id="signup-link">Regístrate</a></p>
+            </form>
+
+            <form id="signup-form" class="form">
+                <h2>Registrarse</h2>
+                <input type="text"  id="nombreReg" placeholder="Nombre" required>
+                <input type="email" id="emailReg" placeholder="Correo Electrónico" required>
+                <input type="password" id="passwordReg" placeholder="Contraseña" required>
+                <input type="password" id="verPasswordReg" placeholder="Verificar Contraseña" required>
+                <button type="button" id="Registro">Registrarse</button>
+                <p>¿Ya tienes una cuenta? <a href="#" id="login-link">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript para alternar entre formularios
+        const signupLink = document.getElementById('signup-link');
+        const loginLink = document.getElementById('login-link');
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+
+        signupLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar que el enlace recargue la página
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        loginLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Evitar que el enlace recargue la página
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        // Inicializar el formulario de inicio de sesión
+        signupForm.style.display = 'none'; // Ocultar el formulario de registro por defecto
+
+        // Manejo de parámetros de URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const action = urlParams.get('action');
+
+        if (action === 'signup-form') {
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        } else {
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        }
+    </script>
+    <script src="/login.js" type="module"></script>
+</body>
+</html>

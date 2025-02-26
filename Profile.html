@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="/Profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Contenedor para cargar el header -->
+    <div id="header-placeholder"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const headerPlaceholder = document.getElementById("header-placeholder");
+            if (headerPlaceholder) {
+                fetch("header.html")
+                    .then(response => response.text())
+                    .then(data => {
+                        headerPlaceholder.innerHTML = data;
+                    })
+                    .catch(error => console.error("Error al cargar el header:", error));
+            }
+        });
+    </script>
+
+    <div class="container">
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <div class="profile-header">
+                <img src="/Imagenes/CasaPerro.jpeg" alt="Foto de perfil" class="profile-img">
+                <h2>Juan Pérez</h2>
+                <p>juanperez@example.com</p>
+                <p>Monterrey, México</p>
+            </div>
+            <ul>
+                <li><a href="/index.html"><i class="fas fa-home" id="Inicio"></i>Inicio</a></li>
+                <li><a href="#"><i class="fas fa-user" id="Perfil"></i> Perfil</a></li>
+                <li><a href="#" id="Mascotas"><i class="fas fa-dog"></i> Mascotas</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt" id="Agenda"></i> Agenda</a></li>
+                <li><a id="CerrarSesion"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</a></li>
+            </ul>
+        </aside>
+
+        <!-- Sección de perfil -->
+        <main class="profile-content">
+            <div class="profile-header" subclass="PerfilInfo">
+                <img src="/Imagenes/CasaPerro.jpeg" alt="Foto de perfil" class="profile-img">
+                <h1>Juan Pérez</h1>
+                <p>juanperez@example.com</p>
+                <p>Monterrey, México</p>
+            </div>
+
+            <div class="profile-details" subclass="PerfilInfo">
+                <h2>Información Personal</h2>
+                <p><strong>Edad:</strong> 28 años</p>
+                <p><strong>Ocupación:</strong> Desarrollador Web</p>
+                <p><strong>Teléfono:</strong> +52 8123456789</p>
+            </div>
+
+            <button onclick="editProfile()">Editar Perfil</button>
+        </main>
+        <div id="detalles-mascotas">
+            <h1>Mascotas</h1>
+            <img src="/Imagenes/CasaPerro.jpeg" alt="Foto de perfil" class="profile-img">
+            <h2>Max</h2>
+            <p>Bulldog</p>
+            <p>5 Años</p>
+            <p>Es un perro muy alegre y jugueton que le gusta comer y dormir mucho</p>
+        </div>
+
+    </div>
+
+    <script>
+        function editProfile() {
+            alert("Función para editar perfil en desarrollo...");
+        }
+    </script>
+    <script src="/Profile.js" type="module"></script>
+</body>
+</html>
