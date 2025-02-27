@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "AVANCEFULLSTACKV2", // La carpeta donde se encuentran tus archivos
+    "public": "AVANCEFULLSTACKV2",
     "ignore": [
       "firebase.json",
       "**/.*",

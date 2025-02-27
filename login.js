@@ -147,14 +147,20 @@ inicioSesionBtn?.addEventListener("click", (event) => {
   });
 });
 
-CerrarSesion.addEventListener("click", (event) => {
-    signOut(auth)
-      .then(() => {
-        alert("Sesión cerrada correctamente.");
-        window.location.href = "index.html"; // Redirige a la página de inicio
-      })
-      .catch((error) => {
-        console.error("Error al cerrar sesión:", error);
-        alert("Hubo un problema al cerrar sesión. Inténtalo de nuevo.");
+document.addEventListener("DOMContentLoaded", () => {
+  const CerrarSesion = document.getElementById("CerrarSesion");
+  
+  if (CerrarSesion) {
+      CerrarSesion.addEventListener("click", (event) => {
+          signOut(auth)
+              .then(() => {
+                  alert("Sesión cerrada correctamente.");
+                  window.location.href = "index.html"; 
+              })
+              .catch((error) => {
+                  console.error("Error al cerrar sesión:", error);
+                  alert("Hubo un problema al cerrar sesión. Inténtalo de nuevo.");
+              });
       });
-  })
+  }
+});
