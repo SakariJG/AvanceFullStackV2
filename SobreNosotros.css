@@ -1,62 +1,82 @@
 /* Estilos generales */
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
+    color: rgb(3, 3, 3);
 }
 
-/* Contenedor principal */
-.container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+/* Fondo de pantalla */
+.background {
+    background-image: url('Imagenes/Cuidador1.jpg'); /* Cambia la ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    position: relative;
 }
 
 /* Títulos */
-h1, h2 {
-    text-align: center;
-    color: #2c3e50;
+h1 {
+    font-size: 48px;
+    color: beige;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Párrafos */
-p {
-    text-align: justify;
-    color: #555;
+h2 {
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+/* Sección de contenido */
+.section {
+    padding: 50px;
+    background-color: rgba(245, 245, 220);
+    margin: 20px 0;
 }
 
 /* Sección del equipo */
 .team {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 /* Estilo para cada miembro del equipo */
 .team-member {
     text-align: center;
-    max-width: 200px;
+    width: 250px;
 }
 
 /* Imágenes con efectos */
 .team-member img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff5733; /* Borde de color */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
-    filter: grayscale(30%);
+    border: 3px solid #f1eded;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    filter: grayscale(25%);
     transition: all 0.3s ease-in-out;
 }
 
 /* Efecto al pasar el mouse */
 .team-member img:hover {
     filter: brightness(1.3) contrast(110%);
-    border-color: #3498db;
+    border-color: #69899e;
 }
+
+/* Footer */
+footer {
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+

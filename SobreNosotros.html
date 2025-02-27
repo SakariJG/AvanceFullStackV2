@@ -4,87 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de Nosotros</title>
-    <style>
-        /* Estilo general */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: rgb(3, 3, 3);
-        }
-
-        /* Fondo de pantalla */
-        .background {
-            background-image: url('Imagenes/Cuidador1.jpg'); /* Cambia 'fondo.jpg' por la ruta de tu imagen */
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: rgb(0,0,0);
-            position: relative;
-        }
-
-        h1 {
-    font-size: 48px;
-    color: beige;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Sombra negra semi-transparente */
-}
-
-
-        /* Estilo de las secciones */
-        .section {
-            padding: 50px;
-            background-color: rgba(245, 245, 220);
-            margin: 20px 0;
-        }
-
-        .team-member {
-            display: inline-block;
-            width: 30%;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .team-member img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-
-        /* Estilos para la historia */
-        .history {
-            font-size: 1.2em;
-        }
-
-        h1, h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #FFFFFF ;
-            padding: 20px;
-            text-align: center;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="SobreNosotros.css"> <!-- Se conecta con el archivo CSS -->
 </head>
 <body>
+
+    <div id="header-placeholder"></div>
+
     <script>
         fetch("header.html")
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById("header-placeholder").innerHTML = data;
-          })
-          .catch(error => console.error("Error al cargar el header:", error));
-      </script>
-
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header-placeholder").innerHTML = data;
+            })
+            .catch(error => console.error("Error al cargar el header:", error));
+    </script>
+    
     <!-- Fondo de pantalla con título -->
     <section class="background">
         <div>
@@ -96,40 +30,44 @@
     <!-- Sección de Historia -->
     <section class="section history">
         <h2>Nuestra Historia</h2>
-        <p>Fundamos nuestro servicio con la misión de ofrecer paseos seguros, personalizados y llenos de diversión. Con el tiempo, hemos crecido gracias a la confianza de nuestra comunidad, sumando a nuestro equipo cuidadores apasionados que comparten nuestro compromiso con el bienestar animal..</p>
+        <p>Fundamos nuestro servicio con la misión de ofrecer paseos seguros, personalizados y llenos de diversión. Con el tiempo, hemos crecido gracias a la confianza de nuestra comunidad, sumando a nuestro equipo cuidadores apasionados que comparten nuestro compromiso con el bienestar animal.</p>
     </section>
 
     <!-- Sección de Miembros del Equipo -->
-    <section class="section">
+    <section class="section team">
         <h2>Conoce a Nuestro Equipo</h2>
         <div class="team-member">
-            <img src="Imagenes/Diego.jpeg" alt="Miembro 1"> <!-- Cambia la ruta de la imagen -->
+            <img src="Imagenes/Diego.jpeg" alt="Diego Valdez">
             <h3>Diego Valdez</h3>
             <p>Director Ejecutivo</p>
-            <p>Diego lidera el equipo con una visión clara de crecimiento e innovación. Con más de 10 años en la industria musical, es el motor que impulsa nuestra misión.</p>
+            <p>Diego lidera el equipo con una visión clara de crecimiento e innovación.</p>
         </div>
         <div class="team-member">
-            <img src="Imagenes/Gama.jpeg" alt="Miembro 2"> <!-- Cambia la ruta de la imagen -->
+            <img src="Imagenes/Gama.jpeg" alt="Gama">
             <h3>Gama</h3>
             <p>Desarrolladora de Producto</p>
-            <p>Gama está encargada de hacer que nuestra plataforma sea fácil de usar y esté siempre a la vanguardia de la tecnología.</p>
+            <p>Gama está encargada de hacer que nuestra plataforma sea fácil de usar.</p>
         </div>
         <div class="team-member">
-            <img src="Imagenes/Said.jpeg" alt="Miembro 3"> <!-- Cambia la ruta de la imagen -->
+            <img src="Imagenes/Said.jpeg" alt="Asbiel Frausto">
             <h3>Asbiel Frausto</h3>
             <p>Director de Marketing</p>
-            <p>Asbiel es el encargado de comunicar nuestra visión al mundo, asegurándose de que todos sepan cómo estamos transformando la industria.</p>
+            <p>Asbiel es el encargado de comunicar nuestra visión al mundo.</p>
         </div>
         <div class="team-member">
-            <img src="Imagenes/Nacho.jpeg" alt="Miembro 1"> <!-- Cambia la ruta de la imagen -->
+            <img src="Imagenes/Nacho.jpeg" alt="Ignacio Gomez">
             <h3>Ignacio Gomez</h3>
             <p>Director Ejecutivo</p>
-            <p>Ignacio lidera el equipo con una visión clara de crecimiento e innovación. Con más de 10 años en la industria musical, es el motor que impulsa nuestra misión.</p>
+            <p>Ignacio lidera el equipo con una visión clara de crecimiento e innovación.</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 HappyTails 
+        <p>&copy; 2025 HappyTails</p>
+    </footer>
+
+</body>
+</html>
 
 
